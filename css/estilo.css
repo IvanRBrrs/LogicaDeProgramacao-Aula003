@@ -6,12 +6,14 @@
 }
 .caixa{
     text-align: center;
-    background-color: green;
-    color: white;
-    width: 250px;
-    height: 250px;
-    line-height: 250px;
+    background-color: gray;
+    color: black;
+    width: 450px;
+    height: 140px;
+    line-height: 50px;
     text-transform: uppercase;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 h1{
     background-color: gray;

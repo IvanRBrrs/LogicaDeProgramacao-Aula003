@@ -1,6 +1,12 @@
 
 
+function calcular (){
+    let temperatura = document.getElementById('temperatura').value;  
+    let resultado = document.getElementById('resultado');
+    let calculo = (temperatura * 1.8) + 32;
 
+    resultado.innerHTML =` A temperatura é ${calculo} `;
+};
 
 
 
