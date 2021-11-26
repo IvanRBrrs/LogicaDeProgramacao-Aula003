@@ -1,17 +1,63 @@
 
-
 function calcular (){
-    let temperatura = document.getElementById('temperatura').value;  
+    let select = parseInt(document.getElementById('seleciona-temperatura').value);
+    let temperaturaC = document.getElementById('temperaturaC').value; 
+    let formulaK = parseInt(temperaturaC) + 273;
+    let formulaF = (parseInt(temperaturaC) * 1.8) + 32;
     let resultado = document.getElementById('resultado');
-    let calculo = (temperatura * 1.8) + 32;
+    
 
-    resultado.innerHTML =` A temperatura é ${calculo} `;
+    switch(select){
+        case 0: 
+            resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`);
+        break;
+        case 1:
+            resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`);
+        break;
+        default:
+            resultado.innerHTML = ('erro')
+        break;    
+    }
 };
 
 
 
+    // if(select == 0){
+    //     resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`)
+    // }else if(select == 1){
+    //     resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`)
+    // }
+
+    // resultado.innerHTML =` A temperatura ${temperaturaC}ºC em Fahrenheit é ${formulaF} `;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function calcular (){
+//     let select = document.getElementById('seleciona-temperatura').value;
+    
+    
+//     // console.log(select);
+
+
+//     let temperatura = document.getElementById('temperatura').value;  
+//     let resultado = document.getElementById('resultado');
+//     let calculo = (temperatura * 1.8) + 32;
+
+//     resultado.innerHTML =` A temperatura ${temperatura}ºC em Fahrenheit é ${calculo} `;
+// };
 
 
 

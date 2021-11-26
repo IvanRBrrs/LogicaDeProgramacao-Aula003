@@ -11,8 +11,15 @@
     <div class="caixa">
         <h2>Conversor de temperatura</h2>
         <label>Temperatura em ºC</label>
-        <input type="text" name="temperatura" id="temperatura" maxlength="4">
+        <input type="text" name="temperatura" id="temperaturaC" maxlength="4">
+        <label>para</label>
+        <select id="seleciona-temperatura">
+            <option value="0">Kelvin</option>
+            <option value="1">Fahrenheit</option>
+        </select>
+        
         <input type="submit" onclick="calcular()" name="converter" value="converter" id="converter">
+        
         <div id="resultado"></div>
     </div>    
 
