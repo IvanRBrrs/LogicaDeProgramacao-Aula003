@@ -3,19 +3,35 @@
     margin: 0 auto;
     padding: 0;
     text-align: center;
+    
+}
+body{
+    position: relative;
 }
 .caixa{
+    
     text-align: center;
     background-color: gray;
     color: black;
-    width: 550px;
+    width: 700px;
     height: 160px;
-    line-height: 50px;
+    /* line-height: 50px; */
     text-transform: uppercase;
     border-radius: 20px;
-    margin-top: 50px;
+    padding-top: 70px;
+
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    
 }
 h1{
     background-color: gray;
     width: 250px;
+}
+#dot{
+    color: gray;
 }

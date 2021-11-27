@@ -1,34 +1,96 @@
 
 function calcular (){
-    let select = parseInt(document.getElementById('seleciona-temperatura').value);
+    let select1 = parseInt(document.getElementById('seleciona-temperatura1').value);
+    let select2 = parseInt(document.getElementById('seleciona-temperatura2').value);
     let temperaturaC = document.getElementById('temperaturaC').value; 
-    let formulaK = parseInt(temperaturaC) + 273;
-    let formulaF = (parseInt(temperaturaC) * 1.8) + 32;
+    let formulaCK = parseInt(temperaturaC) + 273;
+    let formulaCF = (parseInt(temperaturaC) * 1.8) + 32;
+    let formulaKF = parseInt(temperaturaC) - 459.67;
+    let formulaKC = parseInt(temperaturaC) - 273.15;
+    let formulaFK = parseInt(temperaturaC) + 255.92;
+    let formulaFC = parseInt(temperaturaC) - 17.22;
     let resultado = document.getElementById('resultado');
-    
 
-    switch(select){
-        case 0: 
-            resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`);
-        break;
-        case 1:
-            resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`);
-        break;
-        default:
-            resultado.innerHTML = ('erro')
-        break;    
+    // if(select1 === 0 || select2 === 0){
+    //     let nome = 'Kelvin';
+    // }else if(select1 === 1 || select2 === 1){
+    //     let nome = 'ºFahrenheit';
+    // }else if(select1 === 2 || select2 === 2){
+    //     let nome = 'ºCelsius';
+    // }
+
+    if(select1 === 0 && select2 === 0 || select1 == 1 && select2 == 1 || select1 == 2 && select2 == 2){
+        switch(select1 || select2){
+            case 0:
+                resultado.innerHTML = (`A temperatura em Kelvin é ${temperaturaC}`)
+            break;
+            case 1:
+                resultado.innerHTML = (`A temperatura em Fahrenheit é ${temperaturaC}`)
+            break;
+            case 2:
+                resultado.innerHTML = (`A temperatura em Celsius é ${temperaturaC}`)
+            break;
+            
+        } 
+       
+    } else if(select1 === 0 && select2 === 1){
+        let formulaKF = temperaturaC - 459.67;
+        resultado.innerHTML = (`${temperaturaC} Kelvin em Fahrenheit é ${formulaKF}Fahrenheit`)
+    } else if(select1 === 0 && select2 === 2){
+        let formulaKC = temperaturaC - 273.15;
+        resultado.innerHTML = (`${temperaturaC} Kelvin em Celsius é ${formulaKC}ºC`)
+    } else if(select1 === 2 && select2 === 0){
+        let formulaCK = parseInt(temperaturaC) + 273;
+        resultado.innerHTML = (`${temperaturaC}º Celsius em Kelvin é ${formulaCK}`)
+    } else if(select1 === 2 && select2 === 1){
+        let formulaCF = (parseInt(temperaturaC) * 1.8) + 32;
+        resultado.innerHTML = (`${temperaturaC}º Celsius em Kelvin é ${formulaCF}`)
+    } else if(select1 === 1 && select2 === 0){
+        let formulaFK = parseInt(temperaturaC) + 255.92;
+        resultado.innerHTML = (`${temperaturaC}º Celsius em Kelvin é ${formulaFK}`)
+    } else if(select1 === 1 && select2 === 2){
+        let formulaFC = parseInt(temperaturaC) - 17.22;
+        resultado.innerHTML = (`${temperaturaC} Fahrenheit em Celsius é ${formulaFC}ºC`)
     }
 };
 
 
 
-    // if(select == 0){
-    //     resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`)
-    // }else if(select == 1){
+
+// if(select1 === 0 && select2 === 0 || select1 == 1 && select2 == 1 || select1 == 2 && select2 == 2){
+//     if(select1 === 0 && select2 === 0 || select1 == 1 && select2 == 1 || select1 == 2 && select2 == 2){
+//         resultado.innerHTML = (`A temperatura em é ${temperaturaC}`)
+//     }
+// };
+
+
+    // resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`)
+    // }else if(select1 == 1){
     //     resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`)
     // }
-
     // resultado.innerHTML =` A temperatura ${temperaturaC}ºC em Fahrenheit é ${formulaF} `;
+    
+
+
+    // switch(select1){
+    //     case 0: 
+    //         resultado.innerHTML = (`${temperaturaC}ºC em Kelvin é ${formulaK}K`);
+    //     break;
+    //     case 1:
+    //         resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`);
+    //     break;
+    //     case 2:
+    //         resultado.innerHTML = (`${temperaturaC}ºC em Fahrenheit é ${formulaF}ºF`);
+    //     break;
+    //     default:
+    //         resultado.innerHTML = ('erro')
+    //     break;    
+    // }
+
+
+
+
+
 
 
 
